@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>TaskFlow</title>
+    <style>
+        body { font-family: "Comic Sans MS" , sans-serif; margin: 0; padding: 0; background-color: purple; }
+        header { background-color: black; color: white; padding: 15px 30px; }
+        nav a { color: rebeccapurple; text-decoration: none; margin-right: 20px; font-weight: bold; }
+        nav a:hover { text-decoration: underline; }
+        button{ color: mediumpurple; background: black; font-family: "Comic Sans MS" , sans-serif}
+        button:hover {text-decoration: underline}
+        main { padding: 40px; max-width: 900px; margin: 0 auto; background: white; margin-top: 20px; border-radius: 8px; }
+        footer { text-align: center; padding: 15px; color: #64748b; font-size: 0.9em; margin-top: 30px; }
+        .card { border: 1px solid #e2e8f0; padding: 15px; border-radius: 6px; margin-bottom: 10px; }
+    </style>
+
+</head>
+<body>
+    <header>
+        <center><h1 style="margin:0 0 10px 0; color: darkorchid; font-size: 20px;">TaskFlow Corp | Gestão Interna</h1></center>
+        <center><nav>
+            <a href="{{ url_for('index') }}">Início</a>
+            <a href="{{ url_for('criar_atividade') }}">Criar Atividade</a>
+            <a href="{{ url_for('listar_atividades') }}">Listar Atividades</a>
+            <a href="{{ url_for('pessoa') }}">Perfil Colaborador</a>
+        </nav></center>
+    </header>
+
+    <main>
+        {% block conteudo %}
+        {% endblock conteudo %}
+    </main>
+
+    <footer>
+        <p>&copy; 2026 TaskFlow Corp - Painel Administrativo do Colaborador</p>
+    </footer>
+</body>
+</html>

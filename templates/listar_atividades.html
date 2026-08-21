@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block conteudo %}
+
+    <h2>Listagem das atividades</h2>
+    <p>Este é o cana interno de atividades.</p>
+    <div class="card">
+        <h3>Atividades:</h3>
+
+        {% for atividade in dados_lista %}<br>
+        <hr>
+        Nome da atividade: {{atividade.nome_atividade}}<br>
+        Recursos: {{atividade.recurso_atividade}}<br>
+        Data: {{atividade.data_atividade}}<br>
+        Categoria: {{atividade.categoria_atividade}}<br>
+        Descrição: {{atividade.descricao_atividade}}
+        {% endfor %}
+
+    </div>
+
+{% endblock conteudo %}
