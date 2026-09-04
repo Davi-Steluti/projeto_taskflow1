@@ -81,7 +81,8 @@ footer {
 }
 
 img{
-    border: 2px purple;
+    margin: 10px;
+    border: 2px mediumpurple solid;
     border-radius: 15%;
     max-width: 100px;
     max-height: 100px;
