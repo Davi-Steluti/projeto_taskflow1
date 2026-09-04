@@ -99,3 +99,17 @@ button::before {
   left: -5px;
   right: -5px;
 }
+
+.form-label-nome input,
+.form-label-data input,
+.form-label textarea,
+.form-label select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    margin-bottom: 10px;
+    font-family: "Comic Sans MS", sans-serif;
+    border: 2px solid purple; /* Borda roxa para combinar com seu card */
+    border-radius: 20px;       /* Deixa as caixinhas perfeitamente redondas */
+    box-sizing: border-box;
+}

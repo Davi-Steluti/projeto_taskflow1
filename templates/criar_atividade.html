@@ -5,23 +5,23 @@
 <h1>Criar Atividade</h1>
 <div class="card">
     <form action="" method="post">
-        <label>
+        <label class="form-label-nome">
             Nome da atividade:
             <input name="form_nome_atividade" type="text" placeholder="Digite o nome da atividade" required>
         </label>
         <br> <br>
-        <label>
+        <label class="form-label">
             Descrição da atividade:<br>
             <textarea name="form_descricao" rows="10" cols="50" required></textarea>
         </label>
         <br> <br>
-        <label>
+        <label class="form-label-data">
           Data da atividade:
           <input name="form_data_atividade" type="date" required>
         </label>
         <br> <br>
-        <label>Recursos:</label><br>
-        <label for='form_recurso'>
+        <label class="form-label">Recursos:</label><br>
+        <label for='form_recurso' class="form-label">
             <input type="checkbox" name="form_recurso" value="videoconferencia">Equipamentos de videoconferência
             <br><input type="checkbox" name="form_recurso" value="internet">Acesso a internet
             <br><input type="checkbox" name="form_recurso" value="computador">Computador
@@ -29,7 +29,7 @@
         </label>
         <br>
         <br>
-        <label>
+        <label class="form-label">
             Categoria
             <select name="form_categoria" required>
                 <option value="outros">Outros</option>
