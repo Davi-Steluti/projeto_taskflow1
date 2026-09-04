@@ -14,6 +14,11 @@
                 Data: {{atividade.data_atividade}}<br>
                 Categoria: {{atividade.categoria_atividade}}<br>
                 Descrição: {{atividade.descricao_atividade}}
+
+                <br><br>
+                <a href="{{ url_for('excluir_atividade', indice=loop.index0) }}">
+                    <button type="button">Apagar</button>
+                </a>
             <hr>
         </div>
         {% endfor %}

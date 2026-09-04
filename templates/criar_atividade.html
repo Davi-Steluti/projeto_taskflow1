@@ -1,46 +1,47 @@
 {% extends 'base.html' %}
 {% block conteudo %}
 
+
 <h1>Criar Atividade</h1>
+<div class="card">
+    <form action="" method="post">
+        <label>
+            Nome da atividade:
+            <input name="form_nome_atividade" type="text" placeholder="Digite o nome da atividade" required>
+        </label>
+        <br> <br>
+        <label>
+            Descrição da atividade:<br>
+            <textarea name="form_descricao" rows="10" cols="50" required></textarea>
+        </label>
+        <br> <br>
+        <label>
+          Data da atividade:
+          <input name="form_data_atividade" type="date" required>
+        </label>
+        <br> <br>
+        <label>Recursos:</label><br>
+        <label for='form_recurso'>
+            <input type="checkbox" name="form_recurso" value="videoconferencia">Equipamentos de videoconferência
+            <br><input type="checkbox" name="form_recurso" value="internet">Acesso a internet
+            <br><input type="checkbox" name="form_recurso" value="computador">Computador
+            <br><input type="checkbox" name="form_recurso" value="celular">Celular
+        </label>
+        <br>
+        <br>
+        <label>
+            Categoria
+            <select name="form_categoria" required>
+                <option value="outros">Outros</option>
+                <option value="esporte">Esporte</option>
+                <option value="historia">Historia</option>
+                <option value="educacional">Educacional</option>
+            </select>
+      </label>
+        <br> <br>
 
-<form action="" method="post">
-    <label>
-        Nome da atividade:
-        <input name="form_nome_atividade" type="text" placeholder="Digite o nome da atividade" required>
-    </label>
-    <br> <br>
-    <label>
-        Descrição da atividade:<br>
-        <textarea name="form_descricao" rows="10" cols="50" required></textarea>
-    </label>
-    <br> <br>
-    <label>
-      Data da atividade:
-      <input name="form_data_atividade" type="date" required>
-    </label>
-    <br> <br>
-    <label>Recursos:</label><br>
-    <label for='form_recurso'>
-        <input type="checkbox" name="form_recurso" value="videoconferencia">Equipamentos de videoconferência
-        <br><input type="checkbox" name="form_recurso" value="internet">Acesso a internet
-        <br><input type="checkbox" name="form_recurso" value="computador">Computador
-        <br><input type="checkbox" name="form_recurso" value="celular">Celular
-    </label>
-    <br>
-    <br>
-    <label>
-        Categoria
-        <select name="form_categoria" required>
-            <option value="outros">Outros</option>
-            <option value="esporte">Esporte</option>
-            <option value="historia">Historia</option>
-            <option value="educacional">Educacional</option>
-        </select>
-  </label>
-    <br> <br>
-
-    <button type="submit">Enviar🌐</button>
-    <button type="reset">Limpar❌</button>
-
+        <button type="submit">Enviar🌐</button>
+        <button type="reset">Limpar❌</button>
+</div>
 
 {% endblock conteudo %}

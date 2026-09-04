@@ -1,5 +1,5 @@
 #Import de biblioteca
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect, url_for
 
 #Criar objeto flask "apelido - app"
 app = Flask(__name__)
@@ -52,6 +52,15 @@ def listar_atividades():
 @app.route('/pessoa')
 def pessoa():
     return render_template('pessoa.html')
+
+
+@app.route('/atividades/excluir/<int:indice>')
+def excluir_atividade(indice):
+    try:
+        lista.pop(indice)
+    except IndexError:
+        pass
+    return redirect(url_for('listar_atividades'))
 
 # Iniciar aplicação web
 if __name__ == '__main__':
