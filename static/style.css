@@ -18,7 +18,7 @@ header {
 }
 
 nav a {
-    color: rebeccapurple;
+    color: mediumpurple;
     text-decoration: none;
     margin-right: 20px;
     font-weight: bold;
@@ -112,4 +112,27 @@ button::before {
     border: 2px solid purple; /* Borda roxa para combinar com seu card */
     border-radius: 20px;       /* Deixa as caixinhas perfeitamente redondas */
     box-sizing: border-box;
+}
+
+.meu-botao {
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  color: mediumpurple;
+  background: black;
+  font-family: "Comic Sans MS", sans-serif;
+  border-radius: 10%;
+  padding: 10px;
+}
+
+.meu-botao:hover {
+  transform: scale(1.1) translateY(-5px);
+}
+
+.meu-botao::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
 }

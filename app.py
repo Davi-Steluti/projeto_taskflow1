@@ -36,7 +36,7 @@ def criar_atividade():
         lista.append(dados)
         print(lista)
 
-        return render_template('criar_atividade.html', dados_lista=lista)
+        return render_template('listar_atividades.html', dados_lista=lista)
     return render_template('criar_atividade.html')
 
 
