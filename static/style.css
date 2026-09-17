@@ -136,3 +136,15 @@ button::before {
   left: -5px;
   right: -5px;
 }
+
+.base a {
+    transition: all 0.4s ease;
+    border-radius: 5px;
+}
+
+.base a:hover {
+    color: white;
+    background-color: purple;
+    text-shadow: none;
+    padding-left: 15px;
+}

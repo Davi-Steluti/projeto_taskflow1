@@ -1,5 +1,25 @@
 {% extends 'base.html' %}
 {% block conteudo %}
 
+<a class="meu-botao" href="{{url_for('criar_pessoa')}}">Criar usuário</a>
+<div class="card">
+    <h2>Usuários</h2>
+    <div class="ajustar_card">
+        {% for pessoa in dados_pessoas %}
+        <div class="listar_card">
+            <hr>
+            Nome do usuário: {{ pessoa.nome }}<br>
+            E-mail: {{ pessoa.email }}<br>
+            Data de Nascimento: {{ pessoa.data_nascimento }}<br>
+
+            <br><br>
+            <a href="{{ url_for('excluir_pessoa', indice=loop.index0) }}">
+                <button type="button">Apagar</button>
+            </a>
+            <hr>
+        </div>
+        {% endfor %}
+    </div>
+</div>
 
 {% endblock conteudo %}

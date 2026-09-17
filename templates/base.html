@@ -9,9 +9,11 @@
     <header>
         <center><h1 style="margin:0 0 10px 0; color: darkorchid; font-size: 20px;">TaskFlow Corp | Gestão Interna</h1></center>
         <center><nav>
-            <a href="{{ url_for('index') }}">Início</a>
-            <a href="{{ url_for('listar_atividades') }}">Atividades</a>
-            <a href="{{ url_for('pessoa') }}">Usuários</a>
+            <div class="base">
+                <a href="{{ url_for('index') }}">Início</a>
+                <a href="{{ url_for('listar_atividades') }}">Atividades</a>
+                <a href="{{ url_for('pessoa') }}">Usuários</a>
+            </div>
         </nav></center>
     </header>
 
