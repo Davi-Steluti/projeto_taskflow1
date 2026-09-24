@@ -1,9 +1,13 @@
 {% extends 'base.html' %}
 {% block conteudo %}
 
-<a class="meu-botao" href="{{url_for('criar_pessoa')}}">Criar usuário</a>
+
 <div class="card">
     <h2>Usuários</h2>
+    <p>Este é o canal interno de usuários.</p>
+    <hr>
+    <a class="meu-botao" href="{{url_for('criar_pessoa')}}">Criar usuário</a>
+    <h3>Usuários cadastrados:</h3>
     <div class="ajustar_card">
         {% for pessoa in dados_pessoas %}
         <div class="listar_card">

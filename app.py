@@ -3,7 +3,9 @@ from flask import Flask, render_template, request, redirect, url_for
 
 #Criar objeto flask "apelido - app"
 app = Flask(__name__)
+#base fake 1
 lista = []
+#base fake 2
 lista_pessoas = []
 
 #-------------------------------------
@@ -75,14 +77,16 @@ def criar_pessoa():
     return render_template('criar_pessoa.html')
 
 
+#Excluir teste
 @app.route('/atividades/excluir/<int:indice>')
 def excluir_atividade(indice):
     try:
         lista.pop(indice)
     except IndexError:
-        pass
+        print('ERRO ao excluir atividade')
     return redirect(url_for('listar_atividades'))
 
+#Excluir
 @app.route('/pessoa/excluir/<int:indice>')
 def excluir_pessoa(indice):
     if 0 <= indice < len(lista_pessoas):
